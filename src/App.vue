@@ -1,18 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <MapBox></MapBox>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
+import MapBox from "@/components/MapBox.vue";
 
 @Options({
+  data() {
+    return {
+      msg: "" as string,
+    };
+  },
   components: {
-    HelloWorld,
+    MapBox,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  msg!: string;
+}
 </script>
 
 <style>
@@ -23,5 +29,9 @@ export default class App extends Vue {}
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 </style>
