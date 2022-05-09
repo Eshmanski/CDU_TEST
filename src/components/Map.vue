@@ -81,7 +81,8 @@ export default class MapBox extends Vue {
 </script>
 
 <style scoped>
-.map {
+.map,
+.map__wrapper {
   width: 100%;
   height: 100%;
 }
@@ -89,8 +90,6 @@ export default class MapBox extends Vue {
 .map__wrapper {
   position: relative;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   padding: 30px;
   border-radius: 10px;
   background-color: #fff;
