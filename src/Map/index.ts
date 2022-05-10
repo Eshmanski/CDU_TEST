@@ -43,6 +43,7 @@ class MyMap {
 
   onLoad(callback: (ev: MapEventType & EventData) => void) {
     this.map.on("load", callback);
+    this.map.resize();
   }
 
   createLine(name: string, color: string, opacity: number, width: number) {
