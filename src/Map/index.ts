@@ -43,6 +43,9 @@ class MyMap {
 
   onLoad(callback: (ev: MapEventType & EventData) => void) {
     this.map.on("load", callback);
+  }
+
+  resize() {
     this.map.resize();
   }
 

@@ -44,6 +44,8 @@ import { State } from "@/store";
       this.myMap.createLine("plume", "#093", 1, 6);
 
       this.$store.dispatch("getCoordinates");
+
+      this.myMap.resize();
     });
   },
 
