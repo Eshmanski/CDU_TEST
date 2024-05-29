@@ -49,7 +49,7 @@ export default new Vuex.Store<State>({
         commit("setLoading", true);
 
         const res = await axios.get(
-          "https://bibix.gitlab.io/cdu-test/coordinates.ts",
+          `http://${location.host}/coordinates.ts`,
           { headers: { "Content-Type": "text/plain" } }
         );
 
