@@ -34,6 +34,8 @@ jobs:
         run: |
           npm install
           npm run build
+        env:
+          MAPBOX_KEY: ${{ secrets.MAPBOX_KEY }}
       - name: Archive production artifacts
         uses: actions/upload-pages-artifact@v1
         with:
