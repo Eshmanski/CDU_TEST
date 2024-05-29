@@ -1,3 +1,3 @@
 export default {
-  accessTokenMapBox: "",
+  accessTokenMapBox: process.env.MAPBOX_KEY,
 };
