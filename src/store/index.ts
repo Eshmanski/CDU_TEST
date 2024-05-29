@@ -48,10 +48,7 @@ export default new Vuex.Store<State>({
       try {
         commit("setLoading", true);
 
-        const res = await axios.get(
-          `http://${location.host}/coordinates.ts`,
-          { headers: { "Content-Type": "text/plain" } }
-        );
+        const res = await axios.get(`http://${location.host}/coordinates.ts`, { headers: { "Content-Type": "text/plain" } });
 
         const data = [
           ...res.data.matchAll(
